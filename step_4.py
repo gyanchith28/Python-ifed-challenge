@@ -67,13 +67,13 @@ def intersectCall(lst1, lst2):
     -------------
     NONE
     '''
-        start = time.time()
+    start = time.time()
     verified_elements = set(lst1).intersection(set(lst2))
 
     print(len(verified_elements))
     print('While using set intersection, duration: {} seconds'.format(time.time() - start))
 
-if __name__ == "__main__":
+def main():
     with open('subset_elemets.txt') as f:
         subset_elements = f.read().split('\n')
 
@@ -83,3 +83,7 @@ if __name__ == "__main__":
     forLoopCall(subset_elements, all_elements)
     numPyCall(subset_elements, all_elements)
     intersectCall(subset_elements, all_elements)
+
+
+if __name__ == "__main__":
+    main()
